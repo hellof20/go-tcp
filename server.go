@@ -29,7 +29,7 @@ func main() {
  
 func handleClientRequest(con net.Conn) {
 	defer con.Close()
- 
+        con.Write([]byte("Welcome!\n"))
 	clientReader := bufio.NewReader(con)
  
 	for {
